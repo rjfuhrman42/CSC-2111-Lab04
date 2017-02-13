@@ -149,18 +149,32 @@ void CircularList<T>::remove(int index)
 
       if (sze == 1) //special case
       {
+		
+		;
+		CircularList<T>* curr = get(index)
+		
 
-
-
-
+		loc_pos = 0
+		delete curr;
 
 
       }
       else
       {
+      {
          //use local variables
 
-
+	loc_pos = index
+	CircularList<T>* loc = get(index - 1);
+	CircularList<T>* curr  = prev->getNext();
+	CircularList<T>* next = curr->getNext();
+	
+	loc = setNext(next);
+	
+	delete curr;
+	loc_pos = NULL;
+	
+	
 
 
 
